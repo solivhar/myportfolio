@@ -159,6 +159,8 @@ body {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
   overflow: hidden;
+  width: auto;
+  height: 200px;
 }
 .spotify-widget:hover {
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
@@ -288,4 +290,95 @@ body {
   height: 100%;
   object-fit: cover;
   border: none;
+}
+
+/* --- Mobil Responsive Düzenlemeler --- */
+@media (max-width: 700px) {
+  .center-container {
+    min-height: unset;
+    padding: 24px 0 80px 0;
+  }
+
+  .top-row {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 18px;
+  }
+
+  .about,
+  .contact {
+    min-width: 0;
+    width: 90vw;
+    max-width: 340px;
+    font-size: 17px;
+    padding: 14px 10px 8px 10px;
+    margin: 0 auto;
+  }
+
+  .profile-column {
+    margin: 0 auto;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+  }
+
+  .name {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .socials {
+    flex-direction: row;
+    gap: 18px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .icon-soundcloud,
+  .icon-instagram,
+  .icon-youtube,
+  .icon-spotify {
+    font-size: 32px;
+    padding: 0;
+  }
+
+  .discord {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .spotify-widget {
+    position: static;
+    margin: 32px auto 0 auto;
+    width: 95vw;
+    max-width: 340px;
+    height: 120px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    right: unset;
+    bottom: unset;
+    z-index: 10;
+  }
+  .spotify-widget iframe {
+    width: 100% !important;
+    height: 120px !important;
+    border-radius: 16px;
+  }
+
+  .footer-signature {
+    position: static;
+    transform: none;
+    margin: 24px auto 0 auto;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* Sütunları mobilde gizle */
+  .side-column,
+  .top-column {
+    display: none !important;
+  }
 }
